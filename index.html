@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <title>ZOMATO HOME</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        #header-img {
+            position: relative;
+            width: 100vw;
+            height: 600px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapersdsc.net%2Fwp-content%2Fuploads%2F2016%2F09%2FFood-HD-Background.png&f=1&nofb=1');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            width: 100vw;
+            height: 60px;
+        }
+
+        .nav-menu {
+            width: 60vw;
+            height: 60px;
+        }
+
+        .zomato {
+            display: block;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            font-size: 68px;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .header-flex {
+            margin-top: 100px;
+        }
+
+        .nav-link {
+            border-bottom: 0px solid black;
+            transition: border-bottom 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            border-bottom: 5px solid white;
+        }
+
+        .search-box {
+            width: 30vw;
+            height: 60px;
+            background-color: white;
+            border: none;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding-left: 20px;
+            outline: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .search-btn {
+            width: 130px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #second-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            width: 100%;
+            height: 200px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px #ccc;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .card:hover {
+            box-shadow: 1px 1px 10px #000;
+            cursor: pointer;
+        }
+
+        .card-bottom {
+            position: absolute;
+            background-color: white;
+            height: 50px;
+            width: 100%;
+            margin-top: 150px;
+        }
+
+        #popular-locations {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .popular-heading {
+            font-size: 40px;
+            color: black;
+        }
+
+        .locations-div {
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .locations-div:hover {
+            box-shadow: 1px 1px 5px #ccc;
+        }
+        #get-zomato-app{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: rgba(234, 241, 130, 0.1);
+        }
+        .email-input{
+            width: 250px;
+            height: 40px;
+            padding-left: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+        @media only screen and (max-width:768px){
+            .locations-div{
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-img">
+        <header>
+            <div class="d-flex justify-content-center">
+                <div class="nav-menu">
+                    <p class="float-start text-white m-0 mt-3">Get the app</p>
+                    <p class="float-end text-white m-0 mt-3 h4 nav-link">Sign up</p>
+                    <p class="float-end text-white m-0 mt-3 h4 nav-link">Login</p>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="d-flex justify-content-center header-flex">
+                <p class="zomato">Zomato</p>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <input type="text" placeholder="Search for dishes or cuisines..." class="search-box">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+    <section id="second-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Images/c1.jpg" height="100%" nwidth="100%">
+                        <div class="card-bottom">
+                            <p class="h4 m=0 mt-2 text-center">Order Online</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Images/c2.jpg" height="100%" nwidth="100%">
+                        <div class="card-bottom">
+                            <p class="h4 m=0 mt-2 text-center">Go out for a meal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Images/c3.jpg" height="100%" nwidth="100%">
+                        <div class="card-bottom">
+                            <p class="h4 m=0 mt-2 text-center">Night Life</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Images/c4.jpg" height="100%" nwidth="100%">
+                        <div class="card-bottom">
+                            <p class="h4 m=0 mt-2 text-center">Zomato Gold</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- second part start -->
+    <section id="popular-locations">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <p class="popular-heading">popular locations in and around <span class="fw-bold">Kolkata</span>
+                </p>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center locations-div">
+                        <p class="m-0 ml-3 h5">Parkstreet Area</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center locations-div">
+                        <p class="m-0 ml-3 h5">Parkstreet Area</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center locations-div">
+                        <p class="m-0 ml-3 h5">Parkstreet Area</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center locations-div">
+                        <p class="m-0 ml-3 h5">Parkstreet Area</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center locations-div">
+                        <p class="m-0 ml-3 h5">Parkstreet Area</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center locations-div">
+                        <p class="m-0 ml-3 h5">Parkstreet Area</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- second part end  -->
+    <section id="get-zomato-app">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-none d-md-flex">
+                    <img src="Images/zmt.png" class="ml-auto" width="250px" height="400px" style="border-radius: 25px;">
+                </div>
+                <div class="col-md-6">
+                    <p class="display-4 font-weight-bold mt-4">Get the Zomato App</p>
+                    <p>We will send you a link open it on your phone and download it</p>
+                    <div class="d-flex">
+                        <input type="text" placeholder="email" class="email-input">
+                        <button class="btn btn-danger ml-2">Get App</button>
+                    </div>
+                    <p class="mt-3 text-muted">Download app from</p>
+                    <div class="d-flex">
+                        <img width="250px" height="160px" src="Images/p.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
